@@ -1,0 +1,72 @@
+.information {
+  position: relative;
+  padding-bottom: 140px;
+  background-color: #F4F5F5;
+
+  &__text {
+    grid-column: 6 span;
+
+    @include small-tablet {
+      grid-column: 4 span;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    max-width: 80%;
+    color: var(--dark-color);
+    font-size: 31px;
+    font-weight: 400;
+    font-family: var(--second-family);
+    line-height: 38px;
+    letter-spacing: 1.2px;
+
+    @include small-tablet {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    grid-column: 7 / 6 span;
+    display: grid;
+    column-gap: var(--offset);
+    row-gap: 36px;
+    grid-template-columns: repeat(6, 1fr);
+
+    @include small-tablet {
+      grid-column: 4 span;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__item {
+    grid-column: 3 span;
+
+    @include small-tablet {
+      grid-column: 4 span;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 4px;
+    color: var(--dark-color);
+    font-weight: 400;
+    font-size: 15px;
+    font-family: var(--font-family);
+    line-height: 24px;
+  }
+
+  &__descr {
+    margin: 0;
+    color: var(--text-color);
+    font-size: 15px;
+    font-family: var(--font-family);
+    line-height: 24px;
+  }
+
+  @include small-tablet {
+    padding-bottom: 60px;
+  }
+}

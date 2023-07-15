@@ -1,0 +1,145 @@
+.press {
+  padding-top: 88px;
+  background-color: var(--light-color);
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 33px;
+
+    @include small-tablet {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    color: var(--dark-color);
+    font-size: 27px;
+    font-family: var(--second-family);
+    line-height: 38px;
+    letter-spacing: 1.2px;
+  }
+
+  &__link {
+    border-radius: 80px;
+    border: 1px solid rgba(53, 83, 98, 0.20);
+    color: #00413E;
+
+  }
+
+  &__list {
+    row-gap: var(--offset);
+  }
+
+  &__item {
+    grid-column: 4 span;
+  }
+
+  @include small-tablet {
+    padding: 60px 0;
+  }
+}
+
+.press-card {
+  position: relative;
+  border-top: 1px solid rgba(53, 83, 98, 0.30);
+  min-height: 145px;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+    gap: 16px;
+    margin-bottom: 11px;
+  }
+
+  &__author {
+    margin: -18px 0;
+    padding: 18px 0;
+    padding-left: 32px;
+    color: var(--text-color);
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    background-position: left top 15px;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+    &--ted {
+      background-image: url("../img/approach-icon-1.png");
+    }
+
+    &--nyt {
+      background-image: url("../img/approach-icon-2.png");
+    }
+
+    &--corr {
+      background-image: url("../img/press-1.png");
+    }
+
+    &--justice {
+      background-image: url("../img/press-2.png");
+    }
+
+    &--corr1 {
+      background-image: url("../img/press-3.png");
+    }
+
+    &--crime {
+      background-image: url("../img/press-4.png");
+    }
+  }
+
+  &__date {
+    color: var(--text-color);
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin: 0;
+    color: #00413E;
+    font-size: 17px;
+    line-height: 24.65px;
+    transition: color 0.3s ease-in-out;
+  }
+
+  &__link {
+    color: inherit;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  @include hover {
+    .press-card__title {
+      color: var(--accent-color);
+    }
+  }
+
+  &:active {
+    .press-card__title {
+      color: var(--active-color);
+    }
+  }
+}
+
+.press-card__link.focus-visible {
+  &::after {
+    outline: 1px solid var(--active-color);
+  }
+}

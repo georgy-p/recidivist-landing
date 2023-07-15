@@ -1,0 +1,130 @@
+.approach {
+  &__top {
+    padding: 80px 0;
+    background-color: #F7F8F8;
+
+    @include small-tablet {
+      padding: 60px 0;
+    }
+  }
+
+  &__left {
+    grid-column: 5 span;
+    padding-top: 33px;
+
+    @include big-desktop {
+      margin-bottom: var(--offset);
+    }
+
+    @include small-tablet {
+      grid-column: 4 span;
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    grid-column: 7 / 6 span;
+    gap: 8px;
+
+    @include big-desktop {
+      grid-column: 12 span;
+      justify-content: flex-start;
+    }
+
+    @include small-tablet {
+      grid-column: 4 span;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 13px;
+    font-weight: 400;
+    color: var(--dark-color);
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 37px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: var(--text-color);
+  }
+
+  &__btn {
+    border: 1px solid rgba(53, 83, 98, 0.20);
+    padding: 16px 34px;
+    color: #00413E;
+  }
+
+  &__bottom {
+    padding: 24px 0;
+    border-color: var(--light-color);
+  }
+
+  &__item {
+    grid-column: 2 span;
+  }
+
+  &__link {
+    display: block;
+    border-top: 1px solid rgba(53, 83, 98, 0.30);;
+    padding-top: 16px;
+    padding-left: 32px;
+    font-size: 15px;
+    line-height: 24px;
+    color: var(--text-color);
+    background-position: left top 15px;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    &--ted {
+      background-image: url("../../img/approach-icon-1.png");
+    }
+
+    &--nyt {
+      background-image: url("../../img/approach-icon-2.png");
+    }
+
+    &--scoop {
+      background-image: url("../../img/approach-icon-3.png");
+    }
+
+    &--press {
+      background-image: url("../../img/approach-icon-4.png");
+    }
+
+    &--time {
+      background-image: url("../../img/approach-icon-5.png");
+    }
+
+    &--freethink {
+      background-image: url("../../img/approach-icon-6.png");
+    }
+
+    @include hover {
+      border-color: var(--accent-color);;
+      color: var(--accent-color);
+    }
+
+    &:active {
+      border-color: var(--active-color);
+      color: var(--active-color);
+    }
+  }
+}
+
+.approach__link.focus-visible {
+  border-color: var(--active-color);
+}

@@ -1,4 +1,4 @@
-Try it [here](https://recidivist-landing.vercel.app/)
+Try it [here](https://recidiviz.vercel.app/)
 
 # Recidiviz Landing Page
 <img width="1407" alt="Снимок экрана 2023-10-17 в 09 59 57" src="https://github.com/georgy-p/recidiviz-landing/assets/81578359/6ae3d201-6978-41e1-aad5-1fc486080657">
